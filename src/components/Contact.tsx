@@ -28,7 +28,8 @@ export default function Contact({ content }: ContactProps) {
       const response = await fetch('https://formspree.io/f/xrbnlwvq', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formState)
       });

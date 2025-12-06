@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://ozdemirlawoffice.net/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/location</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/konum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/location"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/contact</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/services/real-estate-law</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/hizmetler/gayrimenkul-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/services/real-estate-law"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/services/immigration-citizenship</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/hizmetler/goc-vatandaslik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/services/immigration-citizenship"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/services/corporate-law</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/hizmetler/sirketler-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/services/corporate-law"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/gizlilik-politikasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/privacy-policy"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ozdemirlawoffice.net/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ozdemirlawoffice.net/tr/kullanim-kosullari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ozdemirlawoffice.net/terms-of-service"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

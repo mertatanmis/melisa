@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+@layer base {
+  body {
+    @apply bg-navy-50 text-body font-cormorant;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl font-extrabold text-body mb-4 font-cormorant;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-body mb-8 font-cormorant;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-navy-100 font-cormorant;
+  }
+}

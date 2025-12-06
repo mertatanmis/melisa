@@ -58,6 +58,7 @@ export interface LanguageContent {
     items: Array<{
       title: string;
       description: string;
+      features?: string[];
     }>;
   };
   location: {
@@ -75,6 +76,7 @@ export interface LanguageContent {
     formPhone: string;
     formMessage: string;
     formSubmit: string;
+    whatsapp: string;
   };
   footer: {
     description: string;

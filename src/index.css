@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,20 +11,33 @@ html {
 
 @layer base {
   body {
-    @apply bg-navy-50 text-body font-cormorant;
+    @apply bg-navy-50 text-body font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-4xl font-extrabold text-body mb-4 font-cormorant;
+    @apply text-4xl md:text-5xl font-light text-corporate-900 mb-6 font-serif tracking-tight;
   }
   
   .section-subtitle {
-    @apply text-xl text-body mb-8 font-cormorant;
+    @apply text-lg text-corporate-600 mb-12 font-sans max-w-2xl mx-auto leading-relaxed;
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-navy-100 font-cormorant;
+    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 border border-white/20 p-8;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-accent-500 text-white rounded-full font-medium tracking-wide 
+    hover:bg-accent-600 transition-all duration-300 shadow-lg hover:shadow-accent-500/30 
+    hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .glass-panel {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
   }
 }

@@ -92,34 +92,90 @@ export const content: Record<string, LanguageContent> = {
         {
           title: 'Complimentary Legal Consultation',
           description: 'Begin your journey with a comprehensive 30-minute consultation with our senior legal team. We\'ll analyse your case, outline strategic options, and provide preliminary guidance on the most effective path forward—all without any obligation.',
+          features: [
+            '30-minute one-on-one session with a senior lawyer',
+            'Preliminary case analysis and assessment',
+            'Strategic roadmap outlining potential legal options',
+            'Transparent fee structure discussion',
+            'No financial commitment required'
+          ]
         },
         {
           title: 'International Real Estate & Property Law',
           description: 'Specialised guidance in international property transactions, including comprehensive due diligence, title deed transfers, and investment strategy. Our expertise spans both Turkish and international property regulations, ensuring full compliance and protection of your investments. We handle everything from initial property assessment to final contract execution.',
+          features: [
+            'Comprehensive title deed (Tapu) due diligence',
+            'Purchase and sale agreement drafting and review',
+            'Military clearance and foreign ownership checks',
+            'Power of Attorney (POA) representation services',
+            'Property valuation and price negotiation assistance'
+          ]
         },
         {
           title: 'Corporate & Business Advisory',
           description: 'Full-spectrum legal support for businesses, from company formation to complex commercial transactions. Our services include contract negotiations, regulatory compliance, corporate governance, and strategic business planning. We provide tailored solutions for both local enterprises and international companies establishing a presence in Turkey.',
+          features: [
+            'Company formation (LLC, JSC) and registration',
+            'Drafting and reviewing commercial contracts',
+            'Regulatory compliance and corporate governance',
+            'Mergers, acquisitions, and joint ventures',
+            'Employment law and workplace policy consulting'
+          ]
         },
         {
           title: 'Residency & Citizenship Services',
           description: 'Expert guidance through Turkish citizenship and residency processes. We handle all aspects of immigration law, including residence permits, work permits, and citizenship applications through investment. Our team ensures compliance with current regulations whilst expediting your application process.',
+          features: [
+            'Turkish Citizenship by Investment application',
+            'Short-term and long-term residence permits',
+            'Work permit applications for foreign nationals',
+            'Family reunification visa assistance',
+            'Appeal support for rejected applications'
+          ]
         },
         {
           title: 'Cross-Border Legal Solutions',
           description: 'Comprehensive legal services for international matters, leveraging our unique expertise in both Turkish and British legal systems. We specialize in cross-border contracts, international dispute resolution, and multi-jurisdictional cases, providing seamless legal solutions across borders.',
+          features: [
+            'International dispute resolution and arbitration',
+            'Cross-border contract enforcement',
+            'Recognition and enforcement of foreign judgments',
+            'Legal opinion on Turkish and English law',
+            'Representation in multi-jurisdictional litigation'
+          ]
         },
         {
           title: 'Estate Planning & Inheritance Law',
           description: 'Strategic estate planning and inheritance services tailored to international clients. We handle complex cross-border inheritance cases, will preparation, asset protection, and succession planning, ensuring your legacy is protected across jurisdictions.',
+          features: [
+            'Drafting and registration of wills for foreigners',
+            'Inheritance tax planning and optimization',
+            'Probate and succession proceedings in Turkey',
+            'Asset protection strategies',
+            'Dispute resolution among heirs'
+          ]
         },
         {
           title: 'Investment & Tax Advisory',
           description: 'Strategic legal counsel on investment structures and tax optimisation. Our services include investment planning, tax efficiency analysis, compliance assurance, and representation in tax-related matters. We help navigate both Turkish and international tax regulations to optimise your financial position.',
+          features: [
+            'Tax efficient investment structuring',
+            'Double taxation treaty analysis',
+            'VAT and corporate tax advisory',
+            'Financial compliance and reporting support',
+            'Representation in tax disputes and penalties'
+          ]
         },
         {
           title: 'Tourist & Visitor Legal Protection',
           description: 'Dedicated legal support for international visitors, including 24/7 emergency assistance. We handle tourist-related legal matters, property purchases, dispute resolution, and provide rapid response services with our multilingual team. Our proactive approach helps prevent legal issues while ensuring swift resolution when needed.',
+          features: [
+            '24/7 Emergency legal assistance hotline',
+            'Representation in police and court matters',
+            'Consumer rights protection for tourists',
+            'Accident and injury claim support',
+            'Lost document replacement assistance'
+          ]
         }
       ],
     },
@@ -138,6 +194,7 @@ export const content: Record<string, LanguageContent> = {
       formPhone: 'Your Phone',
       formMessage: 'Your Message',
       formSubmit: 'Send Message',
+      whatsapp: 'Contact on WhatsApp',
     },
     footer: {
       description: 'Your trusted bilingual legal partner in Kusadasi, offering native expertise in both English and Turkish legal matters.',
@@ -242,34 +299,90 @@ export const content: Record<string, LanguageContent> = {
         {
           title: 'Ücretsiz Hukuki Danışmanlık',
           description: 'Kıdemli hukuk ekibimizle 30 dakikalık kapsamlı bir danışmanlık ile başlayın. Davanızı analiz eder, stratejik seçenekleri belirler ve en etkili yol haritası için ön rehberlik sağlarız—hiçbir yükümlülük olmadan.',
+          features: [
+            'Kıdemli avukatla 30 dakikalık birebir görüşme',
+            'Ön dava analizi ve değerlendirmesi',
+            'Potansiyel hukuki seçenekleri belirleyen stratejik yol haritası',
+            'Şeffaf ücret yapısı bilgilendirmesi',
+            'Finansal taahhüt gerektirmez'
+          ]
         },
         {
           title: 'Uluslararası Gayrimenkul & Emlak Hukuku',
           description: 'Kapsamlı durum tespiti, tapu devir işlemleri ve yatırım stratejisi dahil uluslararası gayrimenkul işlemlerinde uzman rehberlik. Uzmanlığımız hem Türk hem de uluslararası gayrimenkul düzenlemelerini kapsar, yatırımlarınızın tam uyumluluğunu ve korunmasını sağlar. İlk gayrimenkul değerlendirmesinden nihai sözleşme imzalanmasına kadar tüm süreci yönetiriz.',
+          features: [
+            'Kapsamlı tapu (due diligence) incelemesi',
+            'Satış vaadi sözleşmesi hazırlama ve inceleme',
+            'Askeri bölge ve yabancı mülkiyet kontrolleri',
+            'Vekaletname ile temsil hizmetleri',
+            'Gayrimenkul değerleme ve fiyat pazarlığı desteği'
+          ]
         },
         {
           title: 'Kurumsal & Ticari Danışmanlık',
           description: 'Şirket kuruluşundan karmaşık ticari işlemlere kadar tam kapsamlı hukuki destek. Hizmetlerimiz sözleşme müzakereleri, yasal uyumluluk, kurumsal yönetişim ve stratejik iş planlamasını içerir. Hem yerel işletmeler hem de Türkiye\'de varlık kuran uluslararası şirketler için özelleştirilmiş çözümler sunarız.',
+          features: [
+            'Şirket (LTD, A.Ş.) kuruluşu ve tescili',
+            'Ticari sözleşmelerin hazırlanması ve incelenmesi',
+            'Yasal uyumluluk ve kurumsal yönetim',
+            'Birleşme, devralma ve ortak girişimler',
+            'İş hukuku ve işyeri politikası danışmanlığı'
+          ]
         },
         {
           title: 'İkamet & Vatandaşlık Hizmetleri',
           description: 'Türk vatandaşlığı ve ikamet süreçlerinde uzman rehberlik. Oturma izinleri, çalışma izinleri ve yatırım yoluyla vatandaşlık başvuruları dahil göçmenlik hukukunun tüm yönlerini ele alırız. Ekibimiz, başvuru sürecinizi hızlandırırken mevcut düzenlemelere uygunluğu sağlar.',
+          features: [
+            'Yatırım yoluyla Türk Vatandaşlığı başvurusu',
+            'Kısa ve uzun dönem ikamet izni başvuruları',
+            'Yabancı uyruklular için çalışma izni',
+            'Aile birleşimi vizesi desteği',
+            'Reddedilen başvurular için itiraz desteği'
+          ]
         },
         {
           title: 'Sınır Ötesi Hukuki Çözümler',
           description: 'Hem Türk hem de İngiliz hukuk sistemlerindeki benzersiz uzmanlığımızı kullanarak kapsamlı uluslararası hukuk hizmetleri. Sınır ötesi sözleşmeler, uluslararası anlaşmazlık çözümü ve çok yargı yetkili davalarda uzmanlaşarak, sınırlar arası kesintisiz hukuki çözümler sunarız.',
+          features: [
+            'Uluslararası tahkim ve uyuşmazlık çözümü',
+            'Sınır ötesi sözleşmelerin uygulanması',
+            'Yabancı mahkeme kararlarının tanınması ve tenfizi',
+            'Türk ve İngiliz hukuku üzerine hukuki mütalaa',
+            'Çok uluslu davalarda temsil'
+          ]
         },
         {
           title: 'Miras Planlaması & Veraset Hukuku',
           description: 'Uluslararası müvekkiller için özelleştirilmiş stratejik miras planlaması ve veraset hizmetleri. Karmaşık sınır ötesi miras davaları, vasiyetname hazırlığı, varlık koruma ve veraset planlaması konularında, mirasınızın tüm yargı bölgelerinde korunmasını sağlarız.',
+          features: [
+            'Yabancılar için vasiyetname hazırlama ve tescili',
+            'Veraset ve intikal vergisi planlaması',
+            'Türkiye\'de veraset ilamı ve intikal işlemleri',
+            'Varlık koruma stratejileri',
+            'Mirasçılar arası uyuşmazlık çözümü'
+          ]
         },
         {
           title: 'Yatırım & Vergi Danışmanlığı',
           description: 'Yatırım yapıları ve vergi optimizasyonu konusunda stratejik hukuki danışmanlık. Hizmetlerimiz yatırım planlaması, vergi verimliliği analizi, uyumluluk güvencesi ve vergi ile ilgili konularda temsili içerir. Finansal pozisyonunuzu optimize etmek için hem Türk hem de uluslararası vergi düzenlemelerinde yol gösteririz.',
+          features: [
+            'Vergi avantajlı yatırım yapılandırması',
+            'Çifte vergilendirmeyi önleme anlaşmaları analizi',
+            'KDV ve kurumlar vergisi danışmanlığı',
+            'Finansal uyumluluk ve raporlama desteği',
+            'Vergi uyuşmazlıkları ve cezalarında temsil'
+          ]
         },
         {
           title: 'Turist & Ziyaretçi Hukuki Koruma',
           description: '7/24 acil yardım dahil uluslararası ziyaretçiler için özel hukuki destek. Turist ile ilgili hukuki konular, mülk alımları, anlaşmazlık çözümü konularını ele alır ve çok dilli ekibimizle hızlı müdahale hizmetleri sunarız. Proaktif yaklaşımımız, hukuki sorunları önlerken gerektiğinde hızlı çözüm sağlar.',
+          features: [
+            '7/24 Acil hukuki yardım hattı',
+            'Karakol ve mahkeme süreçlerinde temsil',
+            'Turistler için tüketici hakları koruması',
+            'Kaza ve yaralanma tazminat desteği',
+            'Kaybolan belge yenileme desteği'
+          ]
         }
       ],
     },
@@ -288,6 +401,7 @@ export const content: Record<string, LanguageContent> = {
       formPhone: 'Telefon Numaranız',
       formMessage: 'Mesajınız',
       formSubmit: 'Mesaj Gönder',
+      whatsapp: 'WhatsApp\'tan Ulaşın',
     },
     footer: {
       description: 'Kuşadası\'nda güvenilir hukuk ortağınız, İngiliz ve Türk hukuk uzmanlığıyla profesyonel hizmet.',

@@ -11,7 +11,9 @@
     "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.2.8",
     "@types/react-router-dom": "^5.3.3",
+    "framer-motion": "^12.23.25",
     "lucide-react": "^0.460.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

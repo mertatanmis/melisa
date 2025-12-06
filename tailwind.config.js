@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        cormorant: ['"Cormorant Garamond"', 'serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Montserrat"', 'sans-serif'],
       },
       fontSize: {
         base: ['1.125rem', { lineHeight: '1.75rem' }], // 18px
@@ -42,17 +43,17 @@ export default {
           900: '#111827'
         },
         accent: {
-          DEFAULT: '#B76E79',
-          50: '#FCF5F6',
-          100: '#F9E5E8',
-          200: '#ECC8CD',
-          300: '#DFA4AD',
-          400: '#B76E79',
-          500: '#A85761',
-          600: '#8A424A',
-          700: '#683238',
-          800: '#462125',
-          900: '#231113'
+          DEFAULT: '#C5A059',
+          50: '#F9F5EB',
+          100: '#F0E8D0',
+          200: '#E0CD9A',
+          300: '#D1B365',
+          400: '#C5A059',
+          500: '#A6843C',
+          600: '#856930',
+          700: '#634E24',
+          800: '#423418',
+          900: '#211A0C'
         },
         navy: {
           DEFAULT: '#070143',

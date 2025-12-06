@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { Globe, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { LanguageContent, Language } from '../types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface NavbarProps {
   content: LanguageContent;
@@ -10,57 +11,68 @@ interface NavbarProps {
 
 export default function Navbar({ content, language, setLanguage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 bg-white/90 backdrop-blur-sm z-50 border-b border-navy-100 shadow-sm">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
+      }`}>
       <div className="container mx-auto px-4">
-        <div className="flex justify-between h-20 sm:h-24 lg:h-36 items-center">
-          <a 
-            href="#home" 
-            className="flex-shrink-0 font-semibold text-lg sm:text-xl lg:text-2xl text-accent-500 flex items-center gap-3 sm:gap-4 lg:gap-6 hover:opacity-90 transition-opacity"
+        <div className="flex justify-between items-center transition-all duration-300">
+          <a
+            href="#home"
+            className="flex-shrink-0 font-serif font-medium text-lg sm:text-xl lg:text-2xl text-corporate-900 flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img 
-              src="/images/last2.svg" 
-              alt={language === 'en' ? 'Ozdemir Law Office Logo' : 'Özdemir Hukuk Bürosu Logo'}
-              className="w-16 sm:w-20 lg:w-32 h-16 sm:h-20 lg:h-32" 
+            <img
+              src="/images/last2.svg"
+              alt="Logo"
+              className={`transition-all duration-300 ${scrolled ? 'w-12 h-12' : 'w-16 h-16 sm:w-20 sm:h-20'}`}
             />
-            <span className="hidden sm:inline">
+            <span className="hidden sm:inline tracking-wide">
               {language === 'en' ? 'OZDEMIR LAW OFFICE' : 'ÖZDEMİR HUKUK BÜROSU'}
             </span>
           </a>
-          
-          {/* Desktop and Large Tablet Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 text-lg">
-            <a href="#home" className="text-body hover:text-accent-500 transition-colors">{content.nav.home}</a>
-            <a href="#about" className="text-body hover:text-accent-500 transition-colors">{content.nav.about}</a>
-            <a href="#services" className="text-body hover:text-accent-500 transition-colors">{content.nav.services}</a>
-            <a href="#location" className="text-body hover:text-accent-500 transition-colors">{content.nav.location}</a>
-            <a href="#contact" className="text-body hover:text-accent-500 transition-colors">{content.nav.contact}</a>
-            
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8 text-base font-sans font-medium text-corporate-800">
+            {['home', 'about', 'services', 'location', 'contact'].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className="hover:text-accent-500 transition-colors uppercase tracking-wider text-sm"
+              >
+                {content.nav[item as keyof typeof content.nav]}
+              </a>
+            ))}
+
             <button
               onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
-              className="inline-flex items-center space-x-2 text-accent-500 hover:text-accent-400 transition-colors"
+              className="inline-flex items-center space-x-2 text-accent-500 hover:text-accent-600 transition-colors border border-accent-200 rounded-full px-4 py-1"
             >
-              <span className="uppercase font-medium">
+              <span className="text-sm font-bold">
                 {language === 'en' ? '🇬🇧 EN' : '🇹🇷 TR'}
               </span>
             </button>
           </div>
 
-          {/* Mobile and Small Tablet Controls */}
+          {/* Mobile Controls */}
           <div className="flex items-center space-x-4 lg:hidden">
             <button
               onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
-              className="text-accent-500 hover:text-accent-400 transition-colors"
+              className="text-accent-500 font-bold"
             >
-              <span className="uppercase font-medium">
-                {language === 'en' ? '🇬🇧' : '🇹🇷'}
-              </span>
+              {language === 'en' ? 'EN' : 'TR'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-body p-2 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-label="Toggle menu"
+              className="text-corporate-900 p-2 hover:bg-black/5 rounded-full transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -68,30 +80,30 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
         </div>
       </div>
 
-      {/* Mobile and Tablet Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-neutral-50 border-t border-neutral-200">
-          <div className="container mx-auto px-4 py-3">
-            <div className="grid sm:grid-cols-2 gap-2 sm:gap-4">
-              <a href="#home" className="px-4 py-3 text-body hover:text-accent-500 transition-colors rounded-lg hover:bg-white flex items-center space-x-2">
-                {content.nav.home}
-              </a>
-              <a href="#about" className="px-4 py-3 text-body hover:text-accent-500 transition-colors rounded-lg hover:bg-white flex items-center space-x-2">
-                {content.nav.about}
-              </a>
-              <a href="#services" className="px-4 py-3 text-body hover:text-accent-500 transition-colors rounded-lg hover:bg-white flex items-center space-x-2">
-                {content.nav.services}
-              </a>
-              <a href="#location" className="px-4 py-3 text-body hover:text-accent-500 transition-colors rounded-lg hover:bg-white flex items-center space-x-2">
-                {content.nav.location}
-              </a>
-              <a href="#contact" className="px-4 py-3 text-body hover:text-accent-500 transition-colors rounded-lg hover:bg-white flex items-center space-x-2 sm:col-span-2">
-                {content.nav.contact}
-              </a>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-neutral-100 overflow-hidden"
+          >
+            <div className="container mx-auto px-4 py-6 space-y-4">
+              {['home', 'about', 'services', 'location', 'contact'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item}`}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-lg font-serif text-corporate-900 hover:text-accent-500 transition-colors"
+                >
+                  {content.nav[item as keyof typeof content.nav]}
+                </a>
+              ))}
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

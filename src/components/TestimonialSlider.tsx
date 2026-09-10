@@ -15,13 +15,13 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.items.length);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 6000);
 
     return () => clearInterval(timer);
   }, [testimonials.items.length]);
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => 
+    setCurrentIndex((prev) =>
       (prev - 1 + testimonials.items.length) % testimonials.items.length
     );
   };
@@ -31,44 +31,67 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
   };
 
   return (
-    <div className="relative overflow-hidden bg-white rounded-xl shadow-lg border border-neutral-200">
-      {/* Navigation Buttons */}
-      <button 
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
-        aria-label="Previous testimonial"
+    <div className="relative overflow-hidden bg-corporate-900 rounded-2xl shadow-[0_24px_60px_-20px_rgba(13,27,46,0.5)]">
+      <div className="bg-navy-pattern absolute inset-0" aria-hidden="true" />
+      {/* Decorative quote mark */}
+      <span
+        className="absolute -top-4 left-6 font-serif text-[120px] leading-none text-accent-400/25 select-none"
+        aria-hidden="true"
       >
-        <ChevronLeft className="w-5 h-5 text-corporate-600" />
-      </button>
-      <button 
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
-        aria-label="Next testimonial"
-      >
-        <ChevronRight className="w-5 h-5 text-corporate-600" />
-      </button>
+        &ldquo;
+      </span>
 
       {/* Testimonials Container */}
-      <div 
-        className="relative transition-transform duration-500 ease-in-out flex"
+      <div
+        className="relative transition-transform duration-700 ease-in-out flex"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {testimonials.items.map((testimonial, index) => (
-          <div 
-            key={index}
-            className="min-w-full p-8"
-          >
-            <div className="max-w-2xl mx-auto text-center">
-              <blockquote className="text-lg text-body italic mb-6">
-                "{testimonial.quote}"
+          <div key={index} className="min-w-full px-10 pt-12 pb-16">
+            <div className="max-w-xl mx-auto text-center">
+              <blockquote className="text-lg md:text-xl text-neutral-100 font-serif italic leading-relaxed mb-6">
+                {testimonial.quote}
               </blockquote>
-              <footer className="text-corporate-700 font-semibold">
-                — {testimonial.author}
+              <footer className="flex items-center justify-center gap-3">
+                <span className="h-px w-8 bg-accent-400/60" aria-hidden="true" />
+                <span className="text-accent-300 font-sans text-sm font-semibold tracking-[0.15em] uppercase">
+                  {testimonial.author}
+                </span>
+                <span className="h-px w-8 bg-accent-400/60" aria-hidden="true" />
               </footer>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Controls: arrows + dots */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 p-2 rounded-full text-white/50 hover:text-accent-300 hover:bg-white/10 transition-all duration-300"
+        aria-label="Previous testimonial"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 p-2 rounded-full text-white/50 hover:text-accent-300 hover:bg-white/10 transition-all duration-300"
+        aria-label="Next testimonial"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        {testimonials.items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === currentIndex ? 'bg-accent-400 w-6' : 'bg-white/25 w-1.5 hover:bg-white/50'
+            }`}
+            aria-label={`Go to testimonial ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
-} 
+}

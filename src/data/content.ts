@@ -15,12 +15,22 @@ export const content: Record<string, LanguageContent> = {
       contact: 'Contact',
     },
     hero: {
+      eyebrow: 'Boutique Law Firm — Kuşadası, Türkiye',
       title: 'OZDEMIR Law Office',
       subtitle: 'Native English & Turkish Legal Expertise in Kusadasi',
-      cta: 'Schedule Free Consultation'
+      cta: 'Schedule Free Consultation',
+      secondaryCta: 'Explore Our Services',
+      stats: [
+        { value: 'EN · TR', label: 'Native-Level Fluency' },
+        { value: 'LL.M.', label: 'University of Hull, UK' },
+        { value: '8', label: 'Practice Areas' },
+        { value: '24/7', label: 'Emergency Legal Line' }
+      ]
     },
     about: {
+      eyebrow: 'The Firm',
       title: 'About Us',
+      classOf: 'Class of',
       description: 'OZDEMIR Law Office is a unique legal practice in Kusadasi, distinguished by our native-level expertise in both English and Turkish legal systems. As a truly bilingual law firm, we offer seamless communication and comprehensive legal services to both local and international clients. Our natural fluency in both languages, combined with deep understanding of both legal systems, positions us uniquely to handle complex international cases while maintaining the personal touch of a boutique law firm.',
       education: {
         title: 'Education & Qualifications',
@@ -45,7 +55,8 @@ export const content: Record<string, LanguageContent> = {
       },
       approach: {
         title: 'Our Approach',
-        description: 'Our practice stands on three pillars: dual-language expertise, professional integrity, and client satisfaction. As native speakers of both English and Turkish, we bridge the cultural and legal gaps that often challenge international clients. Every case receives partner-level attention, ensuring our clients benefit from senior legal expertise throughout their journey with us. We maintain transparent communication in your preferred language, ensuring you\'re always well-informed about your legal matters.'
+        description: 'Our practice stands on three pillars: dual-language expertise, professional integrity, and client satisfaction. As native speakers of both English and Turkish, we bridge the cultural and legal gaps that often challenge international clients. Every case receives partner-level attention, ensuring our clients benefit from senior legal expertise throughout their journey with us. We maintain transparent communication in your preferred language, ensuring you\'re always well-informed about your legal matters.',
+        pillars: ['Dual-Language Expertise', 'Professional Integrity', 'Client Satisfaction']
       },
       expertise: {
         title: 'Areas of Expertise',
@@ -87,7 +98,12 @@ export const content: Record<string, LanguageContent> = {
       },
     },
     services: {
+      eyebrow: 'What We Do',
       title: 'Our Legal Services & Expertise',
+      subtitle: 'Specialised counsel across eight practice areas — in English or Turkish, whichever you prefer.',
+      viewDetails: 'View Details',
+      keyFeatures: 'Key Features',
+      scheduleConsultation: 'Schedule Consultation',
       items: [
         {
           title: 'Complimentary Legal Consultation',
@@ -180,12 +196,20 @@ export const content: Record<string, LanguageContent> = {
       ],
     },
     location: {
-      title: 'Our Location - Kusadasi',
+      eyebrow: 'Where We Are',
+      title: 'Our Location — Kusadasi',
       subtitle: 'Your Legal Partner in Turkey\'s Premier Tourist Destination',
       description: 'Located in the heart of Kusadasi, a premier tourist destination on Turkey\'s Aegean coast, our office serves both local and international clients. Our strategic location near the cruise port and major tourist areas makes us easily accessible to visitors and expatriates. Kusadasi, known for its beautiful marina, historic sites, and thriving real estate market, is home to a large international community, making our bilingual services particularly valuable.',
     },
     contact: {
+      eyebrow: 'Get In Touch',
       title: 'Contact Us',
+      subtitle: 'Tell us about your case — we respond within one business day.',
+      formTitle: 'Send Us a Message',
+      officeAddress: 'Office Address',
+      phoneLabel: 'Phone',
+      whatsappLabel: 'WhatsApp',
+      emailLabel: 'Email',
       address: 'Hacı Feyzullah Mah. İnönü Bulvarı. Kahramanlar Cd. Öztaş Plaza Kat:3 No:33 OZDEMIR Law Office',
       phone: '+90 506 685 2885',
       email: 'info@ozdemirlawoffice.net',
@@ -222,12 +246,22 @@ export const content: Record<string, LanguageContent> = {
       contact: 'İletişim',
     },
     hero: {
+      eyebrow: 'Butik Hukuk Bürosu — Kuşadası, Türkiye',
       title: 'ÖZDEMİR Hukuk Bürosu',
       subtitle: 'Kuşadası\'nda Ana Dil Seviyesinde İngilizce ve Türkçe Hukuk Uzmanlığı',
-      cta: 'Ücretsiz Danışmanlık Randevusu Al'
+      cta: 'Ücretsiz Danışmanlık Randevusu Al',
+      secondaryCta: 'Hizmetlerimizi Keşfedin',
+      stats: [
+        { value: 'EN · TR', label: 'Ana Dil Seviyesinde' },
+        { value: 'LL.M.', label: 'Hull Üniversitesi, İngiltere' },
+        { value: '8', label: 'Uzmanlık Alanı' },
+        { value: '7/24', label: 'Acil Hukuki Destek' }
+      ]
     },
     about: {
+      eyebrow: 'Büromuz',
       title: 'Hakkımızda',
+      classOf: 'Mezuniyet',
       description: 'ÖZDEMİR Hukuk Bürosu, Kuşadası\'nda hem İngilizce hem de Türkçe\'yi ana dil seviyesinde kullanan benzersiz bir hukuk bürosudur. Her iki dilde ve hukuk sisteminde sahip olduğumuz doğal akıcılık, hem yerel hem de uluslararası müvekkillerimize kapsamlı hukuki hizmetler sunmamızı sağlıyor. İki dilli yapımız ve sınır ötesi hukuki konulardaki derin anlayışımız, karmaşık uluslararası davaları yönetirken butik bir hukuk bürosunun kişisel yaklaşımını korumamızı sağlıyor.',
       education: {
         title: 'Eğitim & Nitelikler',
@@ -252,7 +286,8 @@ export const content: Record<string, LanguageContent> = {
       },
       approach: {
         title: 'Yaklaşımımız',
-        description: 'Hukuk pratiğimiz üç temel üzerine kuruludur: çift dilli uzmanlık, mesleki dürüstlük ve müvekkil memnuniyeti. Her iki dili ana dil seviyesinde konuşmamız, uluslararası müvekkillerimizin sıkça karşılaştığı kültürel ve hukuki engelleri aşmalarına yardımcı oluyor. Her dava ortak düzeyinde ilgi görür, böylece müvekkillerimiz tercih ettikleri dilde kesintisiz iletişim kurarak süreç boyunca kıdemli hukuki uzmanlığımızdan faydalanır.'
+        description: 'Hukuk pratiğimiz üç temel üzerine kuruludur: çift dilli uzmanlık, mesleki dürüstlük ve müvekkil memnuniyeti. Her iki dili ana dil seviyesinde konuşmamız, uluslararası müvekkillerimizin sıkça karşılaştığı kültürel ve hukuki engelleri aşmalarına yardımcı oluyor. Her dava ortak düzeyinde ilgi görür, böylece müvekkillerimiz tercih ettikleri dilde kesintisiz iletişim kurarak süreç boyunca kıdemli hukuki uzmanlığımızdan faydalanır.',
+        pillars: ['Çift Dilli Uzmanlık', 'Mesleki Dürüstlük', 'Müvekkil Memnuniyeti']
       },
       expertise: {
         title: 'Uzmanlık Alanlarımız',
@@ -294,7 +329,12 @@ export const content: Record<string, LanguageContent> = {
       },
     },
     services: {
+      eyebrow: 'Ne Yapıyoruz',
       title: 'Hukuki Hizmetlerimiz & Uzmanlık Alanlarımız',
+      subtitle: 'Sekiz uzmanlık alanında hukuki danışmanlık — tercihinize göre Türkçe veya İngilizce.',
+      viewDetails: 'Detayları Gör',
+      keyFeatures: 'Öne Çıkanlar',
+      scheduleConsultation: 'Randevu Al',
       items: [
         {
           title: 'Ücretsiz Hukuki Danışmanlık',
@@ -387,12 +427,20 @@ export const content: Record<string, LanguageContent> = {
       ],
     },
     location: {
-      title: 'Konumumuz - Kuşadası',
+      eyebrow: 'Neredeyiz',
+      title: 'Konumumuz — Kuşadası',
       subtitle: 'Türkiye\'nin Önde Gelen Turizm Merkezinde Hukuk Ortağınız',
       description: 'Türkiye\'nin Ege kıyısındaki önde gelen turizm merkezi Kuşadası\'nın kalbinde yer alan ofisimiz, hem yerel hem de uluslararası müvekkillere hizmet vermektedir. Kruvaziyer limanı ve önemli turizm bölgelerine yakın stratejik konumumuz, ziyaretçiler ve yabancı yerleşimciler için kolay erişilebilirlik sağlıyor. Güzel marinası, tarihi mekanları ve gelişen gayrimenkul piyasasıyla tanınan Kuşadası, büyük bir uluslararası topluluğa ev sahipliği yapıyor ve bu da çift dilli hizmetlerimizi özellikle değerli kılıyor.',
     },
     contact: {
+      eyebrow: 'Bize Ulaşın',
       title: 'İletişim',
+      subtitle: 'Bize davanızdan bahsedin — bir iş günü içinde dönüş yaparız.',
+      formTitle: 'Bize Mesaj Gönderin',
+      officeAddress: 'Ofis Adresi',
+      phoneLabel: 'Telefon',
+      whatsappLabel: 'WhatsApp',
+      emailLabel: 'E-posta',
       address: 'Hacı Feyzullah Mah. İnönü Bulvarı. Kahramanlar Cd. Öztaş Plaza Kat:3 No:33 ÖZDEMİR Hukuk Bürosu',
       phone: '+90 506 685 2885',
       email: 'info@ozdemirlawoffice.net',

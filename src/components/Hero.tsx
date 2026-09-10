@@ -41,7 +41,7 @@ export default function Hero({ content }: HeroProps) {
       </div>
 
       {/* Main content */}
-      <div className="relative flex-1 flex items-center pt-28 pb-16">
+      <div className="relative flex-1 flex items-center pt-36 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <motion.div variants={container} initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p

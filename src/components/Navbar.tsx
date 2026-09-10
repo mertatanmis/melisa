@@ -87,7 +87,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
             </a>
 
             {/* Desktop Navigation */}
-            <div className={`hidden lg:flex items-center space-x-9 font-sans ${linkColor}`}>
+            <div className={`hidden xl:flex items-center space-x-9 font-sans ${linkColor}`}>
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item}
@@ -118,7 +118,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
             </div>
 
             {/* Mobile Controls */}
-            <div className="flex items-center space-x-4 lg:hidden">
+            <div className="flex items-center space-x-4 xl:hidden">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
                 className={`text-sm font-bold tracking-wider ${scrolled ? 'text-accent-600' : 'text-accent-300'}`}
@@ -145,7 +145,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-neutral-100 overflow-hidden"
+              className="xl:hidden bg-white/95 backdrop-blur-xl border-t border-neutral-100 overflow-hidden"
             >
               <div className="container mx-auto px-4 py-6 space-y-4">
                 {NAV_ITEMS.map((item) => (

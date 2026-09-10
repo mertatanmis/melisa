@@ -88,7 +88,7 @@ export default function Contact({ content }: ContactProps) {
   ];
 
   return (
-    <section id="contact" className="py-28 relative overflow-hidden">
+    <section id="contact" className="py-28 relative overflow-hidden scroll-mt-28">
       {/* Soft background flourish */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-corporate-100/60 rounded-full blur-3xl -mr-20 -mt-20" aria-hidden="true"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-accent-100/50 rounded-full blur-3xl -ml-10 -mb-10" aria-hidden="true"></div>

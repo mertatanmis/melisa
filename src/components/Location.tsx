@@ -92,7 +92,7 @@ export default function Location({ content }: LocationProps) {
   };
 
   return (
-    <section id="location" className="py-28 relative overflow-hidden">
+    <section id="location" className="py-28 relative overflow-hidden scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
           eyebrow={content.location.eyebrow}

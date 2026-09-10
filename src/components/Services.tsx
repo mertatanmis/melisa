@@ -33,7 +33,7 @@ export default function Services({ content }: ServicesProps) {
   };
 
   return (
-    <section id="services" className="py-28 bg-corporate-900 relative overflow-hidden">
+    <section id="services" className="py-28 bg-corporate-900 relative overflow-hidden scroll-mt-28">
       <div className="bg-navy-pattern absolute inset-0" aria-hidden="true" />
       <img
         src="/images/last2.svg"

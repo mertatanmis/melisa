@@ -12,7 +12,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ content }) => {
   return (
-    <section id="about" className="py-28 relative overflow-hidden">
+    <section id="about" className="py-28 relative overflow-hidden scroll-mt-28">
       {/* Faint oversized watermark */}
       <img
         src="/images/last2.svg"

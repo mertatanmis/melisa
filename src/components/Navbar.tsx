@@ -27,6 +27,14 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
   const linkColor = scrolled ? 'text-corporate-800' : 'text-white/85';
   const brandColor = scrolled ? 'text-corporate-900' : 'text-white';
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  };
+
   return (
     <header className="fixed top-0 w-full z-50">
       {/* Top contact bar — collapses on scroll */}
@@ -152,7 +160,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                   <a
                     key={item}
                     href={`#${item}`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => scrollToSection(e, item)}
                     className="block text-lg font-serif text-corporate-900 hover:text-accent-500 transition-colors"
                   >
                     {content.nav[item]}
@@ -160,7 +168,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                 ))}
                 <a
                   href="#contact"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => scrollToSection(e, 'contact')}
                   className="inline-block mt-2 text-sm font-semibold uppercase tracking-widest text-corporate-900 bg-gradient-to-r from-[#BF953F] via-[#D9BC66] to-[#AA8A2E] px-6 py-3 rounded-full"
                 >
                   {content.hero.cta}

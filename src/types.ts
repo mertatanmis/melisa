@@ -43,8 +43,10 @@ export interface LanguageContent {
   };
   hero: {
     eyebrow: string;
-    title: string;
+    headline: string;
     subtitle: string;
+    credentials: string[];
+    indexTitle: string;
     cta: string;
     secondaryCta: string;
     stats: { value: string; label: string }[];

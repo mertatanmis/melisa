@@ -71,14 +71,14 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
         className={`w-full transition-all duration-500 border-b ${
           scrolled
             ? 'bg-white/90 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(13,27,46,0.25)] border-neutral-200/60 py-2'
-            : 'bg-gradient-to-b from-black/50 to-transparent border-transparent py-4'
+            : 'border-transparent py-4'
         }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center transition-all duration-300">
             <a
               href="#home"
-              className="flex-shrink-0 flex items-center gap-3 group"
+              className="flex-shrink-0 flex items-center gap-3 group mr-6 lg:mr-12"
             >
               <img
                 src="/images/last2.svg"
@@ -109,7 +109,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
 
               <button
                 onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
-                className={`text-[12px] font-semibold tracking-[0.15em] border rounded-full px-4 py-1.5 transition-colors ${
+                className={`text-[12px] font-semibold tracking-[0.15em] border rounded-full px-4 py-1.5 whitespace-nowrap transition-colors ${
                   scrolled
                     ? 'border-corporate-200 text-corporate-700 hover:border-accent-400 hover:text-accent-600'
                     : 'border-white/30 text-white hover:border-accent-300 hover:text-accent-300'
@@ -120,7 +120,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
 
               <a
                 href="#contact"
-                className="text-[13px] font-semibold uppercase tracking-[0.15em] text-corporate-900 bg-gradient-to-r from-[#BF953F] via-[#D9BC66] to-[#AA8A2E] px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:shadow-accent-500/30 hover:-translate-y-px transition-all duration-300"
+                className="text-[13px] font-semibold uppercase tracking-[0.15em] whitespace-nowrap text-white bg-accent-500 px-6 py-2.5 shadow-md hover:bg-accent-400 transition-colors duration-300"
               >
                 {content.hero.cta}
               </a>
@@ -170,7 +170,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                 <a
                   href="#contact"
                   onClick={(e) => scrollToSection(e, 'contact')}
-                  className="inline-block mt-2 text-sm font-semibold uppercase tracking-widest text-corporate-900 bg-gradient-to-r from-[#BF953F] via-[#D9BC66] to-[#AA8A2E] px-6 py-3 rounded-full"
+                  className="inline-block mt-2 text-sm font-semibold uppercase tracking-widest text-white bg-accent-500 hover:bg-accent-600 px-6 py-3 rounded-full transition-colors"
                 >
                   {content.hero.cta}
                 </a>

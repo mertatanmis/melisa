@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { LanguageContent, Testimonial } from '../types';
 
 interface TestimonialSliderProps {
@@ -16,7 +16,7 @@ export default function TestimonialSlider({ testimonials, a11y }: TestimonialSli
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.items.length);
-    }, 6000);
+    }, 8000);
 
     return () => clearInterval(timer);
   }, [testimonials.items.length]);
@@ -34,22 +34,19 @@ export default function TestimonialSlider({ testimonials, a11y }: TestimonialSli
   return (
     <div className="relative overflow-hidden bg-corporate-900 rounded-2xl shadow-[0_24px_60px_-20px_rgba(13,27,46,0.5)]">
       <div className="bg-navy-pattern absolute inset-0" aria-hidden="true" />
-      {/* Decorative quote mark */}
-      <span
-        className="absolute -top-4 left-6 font-serif text-[120px] leading-none text-accent-400/25 select-none"
-        aria-hidden="true"
-      >
-        &ldquo;
-      </span>
-
       {/* Testimonials Container */}
       <div
         className="relative transition-transform duration-700 ease-in-out flex"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {testimonials.items.map((testimonial, index) => (
-          <div key={index} className="min-w-full px-10 pt-12 pb-16">
-            <div className="max-w-xl mx-auto text-center">
+          <div key={index} className="min-w-full px-10 py-14 flex">
+            <div className="max-w-xl mx-auto text-center my-auto">
+              <Quote
+                className="w-9 h-9 md:w-11 md:h-11 text-accent-400/50 mx-auto mb-7"
+                strokeWidth={1.25}
+                aria-hidden="true"
+              />
               <blockquote className="text-lg md:text-xl text-neutral-100 font-serif italic leading-relaxed mb-6">
                 {testimonial.quote}
               </blockquote>

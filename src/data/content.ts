@@ -16,14 +16,16 @@ export const content: Record<string, LanguageContent> = {
     },
     hero: {
       eyebrow: 'Boutique Law Firm — Kuşadası, Türkiye',
-      title: 'OZDEMIR Law Office',
-      subtitle: 'Native English & Turkish Legal Expertise in Kusadasi',
+      headline: 'English & Turkish legal counsel in Kuşadası.',
+      subtitle: 'Advising international clients on property, residency, inheritance and commercial matters under Turkish law — in native-level English.',
+      credentials: ['Av. Melisa Gül Özdemir', 'Aydın Bar Association', 'LL.M. University of Hull', 'LL.B. İzmir University of Economics'],
+      indexTitle: 'Practice Areas',
       cta: 'Schedule Free Consultation',
       secondaryCta: 'Explore Our Services',
       stats: [
         { value: 'EN · TR', label: 'Native-Level Fluency' },
         { value: 'LL.M.', label: 'University of Hull, UK' },
-        { value: '8', label: 'Practice Areas' },
+        { value: '10', label: 'Practice Areas' },
         { value: '24/7', label: 'Emergency Legal Line' }
       ]
     },
@@ -68,7 +70,9 @@ export const content: Record<string, LanguageContent> = {
           'Property Investment Advisory',
           'International Tax Planning',
           'Family & Inheritance Law',
-          'Tourist Legal Protection'
+          'Tourist Legal Protection',
+          'Minor Criminal Cases',
+          'Document Legalisation & Certification'
         ]
       },
       testimonials: {
@@ -87,12 +91,20 @@ export const content: Record<string, LanguageContent> = {
             author: 'Carole Margan'
           },
           {
-            quote: 'When we lost my Mum in Kusadasi, Melisa helped us navigate the complex legal process of accessing her belongings and repatriating her. She was kind, professional, and went above and beyond during this difficult time. We highly recommend her excellent bilingual legal services.',
-            author: 'Matt G.'
+            quote: 'When we lost my Mum who was living in Kusadasi, Turkey, we didn\'t know where to start with the legal process of gaining access to her things, or repatriating her for her funeral in the U.K. Luckily, we were put in contact with Melisa quickly, and we were so grateful that this was the case. Melisa worked tirelessly ensuring the legal process was as seamless as possible for us during a very difficult time. She was kind, personable and professional, and went above and beyond to answer any questions or queries we had. She was with us through every single stage, ensuring we understood what was happening; we always felt like she was really looking out for us to make things as easy as possible. We genuinely don\'t know how we would have coped in this difficult time without Melisa, and we highly recommend her to anyone looking for an excellent lawyer in Turkey who speaks both perfect English and Turkish. Thanks again Melisa, we really couldn\'t have done it without you and we\'ll always be grateful.',
+            author: 'Matt Grant'
           },
           {
-            quote: 'I cannot express how grateful I am to Melisa for handling the sale of my property in Turkey while I was unable to travel from the UK. She was professional, friendly, and nothing was ever too much trouble. Her support and kindness will always be remembered with gratitude.',
-            author: 'Carole W.'
+            quote: 'I cannot express how grateful I am about being introduced to Melisa to act on my behalf during the selling of my property in Turkey. Sadly I was unable to travel from the UK and relied on a recommendation from a fellow owner in Kusadasi. Melisa was very professional but also friendly and accessible. Nothing was ever too much trouble. Thank you so much for your hard work and patience with me during this process. Your support and kindness is something I will always remember with gratitude.',
+            author: 'Carole Weatherall'
+          },
+          {
+            quote: 'I want to thank Melisa Özdemir for all her hard work and help with the sale of my property in Kusadasi — engaging with the estate agent, acting under my power of attorney, and being so instrumental in getting me all the relevant documents translated and notarised that I required to complete the sale. I could not recommend her highly enough and would not hesitate to recommend her to anyone who needs the best solicitor in Kusadasi.',
+            author: 'Maurice Dawson'
+          },
+          {
+            quote: 'I just want to recommend Melisa — from the first contact by WhatsApp to meeting her, she has been very efficient and put my mind at ease. My timeline was very short but she accommodated me very quickly. Very approachable and friendly, but very professional. I would recommend her especially to people who need an English speaker — her English is impeccable.',
+            author: 'Bernie Butler'
           }
         ]
       },
@@ -107,9 +119,9 @@ export const content: Record<string, LanguageContent> = {
       items: [
         {
           title: 'Complimentary Legal Consultation',
-          description: 'Begin your journey with a comprehensive 30-minute consultation with our senior legal team. We\'ll analyse your case, outline strategic options, and provide preliminary guidance on the most effective path forward—all without any obligation.',
+          description: 'Begin your journey with a comprehensive 30-minute consultation. We\'ll analyse your case, outline strategic options, and provide preliminary guidance on the most effective path forward—all without any obligation.',
           features: [
-            '30-minute one-on-one session with a senior lawyer',
+            '30-minute one-on-one consultation',
             'Preliminary case analysis and assessment',
             'Strategic roadmap outlining potential legal options',
             'Transparent fee structure discussion',
@@ -124,7 +136,9 @@ export const content: Record<string, LanguageContent> = {
             'Purchase and sale agreement drafting and review',
             'Military clearance and foreign ownership checks',
             'Power of Attorney (POA) representation services',
-            'Property valuation and price negotiation assistance'
+            'Property valuation and price negotiation assistance',
+            'Completion of conveyancing via Power of Attorney, or full conveyancing assistance',
+            'Pre-purchase checks for burdens, liens, mortgages or other legal liabilities'
           ]
         },
         {
@@ -192,6 +206,16 @@ export const content: Record<string, LanguageContent> = {
             'Accident and injury claim support',
             'Lost document replacement assistance'
           ]
+        },
+        {
+          title: 'Document Legalisation & Certification',
+          description: 'Certification and legalisation of documents intended for use abroad — for civil matters such as the recognition of a new-born child or parentage before foreign authorities, and for financial matters such as proof of funds or bank statement legalisation. We also obtain Turkish tax numbers for official purposes.',
+          features: [
+            'Certification of documents for use before foreign authorities',
+            'Civil matters: newborn registration and parentage recognition',
+            'Financial matters: proof of funds and bank statement legalisation',
+            'Obtaining Turkish tax numbers for official purposes'
+          ]
         }
       ],
     },
@@ -258,14 +282,16 @@ export const content: Record<string, LanguageContent> = {
     },
     hero: {
       eyebrow: 'Butik Hukuk Bürosu — Kuşadası, Türkiye',
-      title: 'ÖZDEMİR Hukuk Bürosu',
-      subtitle: 'Kuşadası\'nda Ana Dil Seviyesinde İngilizce ve Türkçe Hukuk Uzmanlığı',
+      headline: 'Kuşadası\'nda İngilizce ve Türkçe hukuki danışmanlık.',
+      subtitle: 'Uluslararası müvekkillere gayrimenkul, ikamet, miras ve ticari konularda Türk hukuku kapsamında danışmanlık — ana dil seviyesinde İngilizce ile.',
+      credentials: ['Av. Melisa Gül Özdemir', 'Aydın Barosu', 'LL.M. Hull Üniversitesi', 'LL.B. İzmir Ekonomi Üniversitesi'],
+      indexTitle: 'Uzmanlık Alanları',
       cta: 'Ücretsiz Danışmanlık Randevusu Al',
       secondaryCta: 'Hizmetlerimizi Keşfedin',
       stats: [
         { value: 'EN · TR', label: 'Ana Dil Seviyesinde' },
         { value: 'LL.M.', label: 'Hull Üniversitesi, İngiltere' },
-        { value: '8', label: 'Uzmanlık Alanı' },
+        { value: '10', label: 'Uzmanlık Alanı' },
         { value: '7/24', label: 'Acil Hukuki Destek' }
       ]
     },
@@ -310,7 +336,9 @@ export const content: Record<string, LanguageContent> = {
           'Gayrimenkul Yatırım Danışmanlığı',
           'Uluslararası Vergi Planlaması',
           'Aile ve Miras Hukuku',
-          'Turist Hukuki Koruma'
+          'Turist Hukuki Koruma',
+          'Asliye Ceza Davaları',
+          'Belge Tasdiki & Legalizasyon'
         ]
       },
       testimonials: {
@@ -329,12 +357,20 @@ export const content: Record<string, LanguageContent> = {
             author: 'Carole Margan'
           },
           {
-            quote: 'Kuşadası\'nda annemizi kaybettiğimizde, Melisa eşyalarına erişim ve cenazesini ülkesine geri gönderme gibi karmaşık hukuki süreçlerde bize yardımcı oldu. Nazik, profesyonel ve bu zor zamanda her şeyin ötesine geçti. Mükemmel çift dilli hukuki hizmetlerini şiddetle tavsiye ederiz.',
-            author: 'Matt G.'
+            quote: 'Kuşadası, Türkiye\'de yaşayan annemizi kaybettiğimizde, eşyalarına erişmek veya cenaze için İngiltere\'ye geri göndermek gibi hukuki süreçlere nereden başlayacağımızı bilmiyorduk. Neyse ki hızlıca Melisa ile iletişime geçtik ve bunun için çok minnettarız. Melisa, bu zor dönemde hukuki sürecin bizim için mümkün olduğunca sorunsuz ilerlemesini sağlamak için yorulmadan çalıştı. Nazik, samimi ve profesyoneldi; tüm sorularımızı yanıtlamak için elinden gelenin fazlasını yaptı. Her aşamada yanımızdaydı, olan biteni anladığımızdan emin oldu; her zaman bizi gözettiğini ve her şeyi kolaylaştırmaya çalıştığını hissettik. Bu zor dönemde Melisa olmadan nasıl başa çıkardık bilmiyoruz ve Türkiye\'de hem kusursuz İngilizce hem Türkçe konuşan mükemmel bir avukat arayan herkese şiddetle tavsiye ederiz. Tekrar teşekkürler Melisa, sensiz bunu başaramazdık ve her zaman minnettar kalacağız.',
+            author: 'Matt Grant'
           },
           {
-            quote: 'İngiltere\'den seyahat edemediğim için Türkiye\'deki mülkümün satışını gerçekleştiren Melisa\'ya ne kadar minnettar olduğumu ifade edemem. Profesyonel, samimi ve hiçbir şey asla sorun olmadı. Desteği ve nezaketi her zaman minnetle hatırlanacak.',
-            author: 'Carole W.'
+            quote: 'Türkiye\'deki mülkümün satışında benim adıma hareket etmesi için Melisa ile tanıştırıldığım için ne kadar minnettar olduğumu anlatamam. Ne yazık ki İngiltere\'den seyahat edemedim ve Kuşadası\'ndaki bir mülk sahibinin tavsiyesine güvendim. Melisa çok profesyonel ama aynı zamanda samimi ve ulaşılabilirdi. Hiçbir şey asla sorun olmadı. Bu süreçte bana gösterdiği çaba ve sabır için çok teşekkür ederim. Desteği ve nezaketi her zaman şükranla hatırlanacak.',
+            author: 'Carole Weatherall'
+          },
+          {
+            quote: 'Kuşadası\'ndaki mülkümün satışında gösterdiği tüm çaba ve yardım için Melisa Özdemir\'e teşekkür etmek istiyorum — emlakçıyla iletişim kurması, vekaletnamemle hareket etmesi ve satışı tamamlamak için gereken tüm belgelerin tercümesini ve noter onayını sağlaması çok değerliydi. Onu yeterince övemem; Kuşadası\'nda en iyi avukata ihtiyacı olan herkese tereddüt etmeden tavsiye ederim.',
+            author: 'Maurice Dawson'
+          },
+          {
+            quote: 'Melisa\'yı tavsiye etmek istiyorum — WhatsApp\'taki ilk iletişimden yüz yüze görüşmeye kadar çok verimliydi ve içimi rahatlattı. Zaman çizelgem çok kısaydı ama beni çok hızlı kabul etti. Çok yaklaşılabilir ve samimi ama aynı zamanda çok profesyonel. Özellikle İngilizce konuşan birine ihtiyaç duyanlara tavsiye ederim — İngilizcesi kusursuz.',
+            author: 'Bernie Butler'
           }
         ]
       },
@@ -349,9 +385,9 @@ export const content: Record<string, LanguageContent> = {
       items: [
         {
           title: 'Ücretsiz Hukuki Danışmanlık',
-          description: 'Kıdemli hukuk ekibimizle 30 dakikalık kapsamlı bir danışmanlık ile başlayın. Davanızı analiz eder, stratejik seçenekleri belirler ve en etkili yol haritası için ön rehberlik sağlarız—hiçbir yükümlülük olmadan.',
+          description: '30 dakikalık kapsamlı bir danışmanlık ile başlayın. Davanızı analiz eder, stratejik seçenekleri belirler ve en etkili yol haritası için ön rehberlik sağlarız—hiçbir yükümlülük olmadan.',
           features: [
-            'Kıdemli avukatla 30 dakikalık birebir görüşme',
+            '30 dakikalık birebir görüşme',
             'Ön dava analizi ve değerlendirmesi',
             'Potansiyel hukuki seçenekleri belirleyen stratejik yol haritası',
             'Şeffaf ücret yapısı bilgilendirmesi',
@@ -366,7 +402,9 @@ export const content: Record<string, LanguageContent> = {
             'Satış vaadi sözleşmesi hazırlama ve inceleme',
             'Askeri bölge ve yabancı mülkiyet kontrolleri',
             'Vekaletname ile temsil hizmetleri',
-            'Gayrimenkul değerleme ve fiyat pazarlığı desteği'
+            'Gayrimenkul değerleme ve fiyat pazarlığı desteği',
+            'Vekaletname ile satış işlemlerinin tamamlanması veya süreç boyunca tam destek',
+            'Satın alma öncesi taşınmaz üzerindeki ipotek, haciz ve sair hukuki yükümlülüklerin incelenmesi'
           ]
         },
         {
@@ -433,6 +471,16 @@ export const content: Record<string, LanguageContent> = {
             'Turistler için tüketici hakları koruması',
             'Kaza ve yaralanma tazminat desteği',
             'Kaybolan belge yenileme desteği'
+          ]
+        },
+        {
+          title: 'Belge Tasdiki & Legalizasyon',
+          description: 'Yurt dışında kullanılacak belgelerin tasdiki ve legalizasyonu — yeni doğan çocuğun veya anne/baba tanımasının yabancı makamlar nezdinde bildirilmesi gibi medeni işlemler ile mal varlığı belgesi (proof of funds), banka dekontu legalizasyonu gibi mali işlemler için. Ayrıca gerekli işlemler için Türk vergi numarası temin ediyoruz.',
+          features: [
+            'Yabancı makamlara sunulacak belgelerin tasdiki',
+            'Medeni işlemler: yeni doğan ve soybağı tanıma belgeleri',
+            'Mali işlemler: mal varlığı belgesi ve banka dekontu legalizasyonu',
+            'Resmi işlemler için Türk vergi numarası temini'
           ]
         }
       ],

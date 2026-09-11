@@ -15,6 +15,7 @@ interface Education {
 interface Approach {
   title: string;
   description: string;
+  pillars: string[];
 }
 
 interface Expertise {
@@ -41,20 +42,30 @@ export interface LanguageContent {
     contact: string;
   };
   hero: {
+    eyebrow: string;
     title: string;
     subtitle: string;
     cta: string;
+    secondaryCta: string;
+    stats: { value: string; label: string }[];
   };
   about: {
+    eyebrow: string;
     title: string;
     description: string;
+    classOf: string;
     education: Education;
     approach: Approach;
     expertise: Expertise;
     testimonials: Testimonials;
   };
   services: {
+    eyebrow: string;
     title: string;
+    subtitle: string;
+    viewDetails: string;
+    keyFeatures: string;
+    scheduleConsultation: string;
     items: Array<{
       title: string;
       description: string;
@@ -62,12 +73,20 @@ export interface LanguageContent {
     }>;
   };
   location: {
+    eyebrow: string;
     title: string;
     subtitle: string;
     description: string;
   };
   contact: {
+    eyebrow: string;
     title: string;
+    subtitle: string;
+    formTitle: string;
+    officeAddress: string;
+    phoneLabel: string;
+    whatsappLabel: string;
+    emailLabel: string;
     address: string;
     phone: string;
     email: string;
@@ -75,6 +94,7 @@ export interface LanguageContent {
     formEmail: string;
     formPhone: string;
     formMessage: string;
+    formMessagePlaceholder: string;
     formSubmit: string;
     whatsapp: string;
   };
@@ -93,5 +113,15 @@ export interface LanguageContent {
     weekdayHours: string;
     saturdayHours: string;
     closed: string;
+  };
+  a11y: {
+    toggleMenu: string;
+    close: string;
+    previousImage: string;
+    nextImage: string;
+    previousTestimonial: string;
+    nextTestimonial: string;
+    goToSlide: string;
+    goToTestimonial: string;
   };
 }

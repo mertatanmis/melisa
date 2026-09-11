@@ -90,11 +90,11 @@ export default function ImageSlider({ content }: ImageSliderProps) {
                   target.src = '/images/last2.svg'; // Fallback image
                 }}
               />
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent text-white p-6">
-                <p className="text-center text-lg font-cormorant font-semibold tracking-wide mb-2">
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-corporate-900/90 via-corporate-900/40 to-transparent text-white p-6 pt-16">
+                <p className="text-center text-lg font-serif font-medium tracking-wide mb-1">
                   {image.caption}
                 </p>
-                <p className="text-center text-sm font-light opacity-90 max-w-2xl mx-auto">
+                <p className="text-center text-sm font-light text-white/75 max-w-2xl mx-auto">
                   {image.description}
                 </p>
               </div>
@@ -105,16 +105,18 @@ export default function ImageSlider({ content }: ImageSliderProps) {
 
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-2.5 rounded-full transition-all duration-300 border border-white/20"
+        aria-label={content.a11y.previousImage}
       >
-        <ChevronLeft className="w-6 h-6 text-gray-800" />
+        <ChevronLeft className="w-5 h-5" />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-2.5 rounded-full transition-all duration-300 border border-white/20"
+        aria-label={content.a11y.nextImage}
       >
-        <ChevronRight className="w-6 h-6 text-gray-800" />
+        <ChevronRight className="w-5 h-5" />
       </button>
     </div>
   );

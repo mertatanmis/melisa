@@ -19,11 +19,11 @@ function App() {
     // Update document title based on language
     document.title = language === 'en'
       ? 'OZDEMIR Law Office | Legal Services in Kusadasi'
-      : 'ÖZDEMİR Hukuk Bürosu | Kusadasi Hukuk Hizmetleri';
+      : 'ÖZDEMİR Hukuk Bürosu | Kuşadası Hukuk Hizmetleri';
   }, [language]);
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen">
       <Navbar
         content={currentContent}
         language={language}

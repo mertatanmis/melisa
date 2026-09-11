@@ -2,6 +2,7 @@ import { LanguageContent } from '../types';
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, MapPin, Anchor, Castle, Building } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SectionHeader from './SectionHeader';
 
 interface LocationProps {
   content: LanguageContent;
@@ -17,7 +18,7 @@ const getLocationImages = (isEnglish: boolean) => [
   },
   {
     url: "/images/kusadasi/guvercinada.jpg",
-    caption: "Güvercin Adası (Pigeon Island)",
+    caption: isEnglish ? "Güvercin Adası (Pigeon Island)" : "Güvercin Adası",
     description: isEnglish
       ? "Historic fortress with panoramic views of the Aegean Sea"
       : "Ege Denizi'nin panoramik manzarasına sahip tarihi kale"
@@ -91,45 +92,39 @@ export default function Location({ content }: LocationProps) {
   };
 
   return (
-    <section id="location" className="py-24 bg-neutral-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-1/3 h-1/3 bg-corporate-100 rounded-full blur-3xl opacity-20 -translate-y-1/2 -ml-20"></div>
-
+    <section id="location" className="py-28 relative overflow-hidden scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            {content.location.title}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-corporate-400 to-accent-400 mx-auto mb-6 rounded-full"></div>
-          <p className="section-subtitle">
-            {content.location.subtitle}
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow={content.location.eyebrow}
+          title={content.location.title}
+          subtitle={content.location.subtitle}
+        />
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Left Column: Description and Features */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="flex"
           >
-            <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 mb-8 border border-white/20">
-              <p className="text-body leading-relaxed mb-8 font-sans text-lg">
+            <div className="card flex flex-col justify-center w-full">
+              <p className="text-body leading-relaxed font-sans text-lg first-letter:font-serif first-letter:text-5xl first-letter:text-accent-500 first-letter:mr-2 first-letter:float-left first-letter:leading-[0.85]">
                 {content.location.description}
               </p>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-10 pt-8 border-t border-neutral-100">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="bg-corporate-50 p-3 rounded-xl">
-                      <feature.icon className="w-6 h-6 text-corporate-600" />
+                    <div className="p-2.5 rounded-lg bg-accent-50 border border-accent-200/60 flex-shrink-0">
+                      <feature.icon className="w-5 h-5 text-accent-600" />
                     </div>
                     <div>
-                      <h4 className="font-serif font-semibold text-corporate-800 mb-1">
+                      <h4 className="font-serif font-semibold text-corporate-900 mb-0.5">
                         {feature.title}
                       </h4>
-                      <p className="text-sm text-neutral-600 font-sans">
+                      <p className="text-sm text-neutral-500 font-sans leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -143,20 +138,23 @@ export default function Location({ content }: LocationProps) {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[500px] overflow-hidden rounded-2xl shadow-2xl"
+            className="relative h-[420px] lg:h-auto lg:min-h-[520px] overflow-hidden rounded-2xl shadow-[0_24px_60px_-20px_rgba(13,27,46,0.4)] ring-1 ring-neutral-200/60"
           >
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/90 text-white hover:text-corporate-900 p-3 rounded-full transition-all duration-300 border border-white/20"
+              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
+              aria-label={content.a11y.previousImage}
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/90 text-white hover:text-corporate-900 p-3 rounded-full transition-all duration-300 border border-white/20"
+              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
+              aria-label={content.a11y.nextImage}
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
 
             {/* Image Slider */}
@@ -172,12 +170,12 @@ export default function Location({ content }: LocationProps) {
                       alt={image.caption}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-corporate-900/90 via-corporate-900/20 to-transparent"></div>
                     <div className="absolute bottom-0 inset-x-0 p-8 text-white">
-                      <h4 className="text-2xl font-serif font-medium mb-2">
+                      <h4 className="text-2xl font-serif font-medium mb-1">
                         {image.caption}
                       </h4>
-                      <p className="text-white/80 font-sans font-light">
+                      <p className="text-white/75 font-sans font-light text-sm">
                         {image.description}
                       </p>
                     </div>
@@ -192,11 +190,11 @@ export default function Location({ content }: LocationProps) {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                      ? 'bg-white w-6'
-                      : 'bg-white/50 hover:bg-white/80'
+                  className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
+                      ? 'bg-accent-400 w-6'
+                      : 'bg-white/50 w-1.5 hover:bg-white/80'
                     }`}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={content.a11y.goToSlide.replace('{n}', String(index + 1))}
                 />
               ))}
             </div>

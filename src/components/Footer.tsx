@@ -10,18 +10,23 @@ export default function Footer({ content }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-corporate-900 text-white pt-20 pb-10 border-t border-corporate-800">
-      <div className="container mx-auto px-4">
+    <footer className="bg-corporate-900 text-white pt-20 pb-10 relative">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent" aria-hidden="true"></div>
+      <div className="bg-navy-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+      <div className="container mx-auto px-4 relative">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-serif mb-6 tracking-wide text-white">
-              {content.nav.home === 'Home' ? 'OZDEMIR' : 'ÖZDEMİR'}
-              <span className="block text-sm font-sans font-light text-gray-400 mt-1 uppercase tracking-widest">
-                {content.nav.home === 'Home' ? 'Law Office' : 'Hukuk Bürosu'}
-              </span>
-            </h3>
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/images/last2.svg" alt="" className="w-11 h-11 opacity-90" aria-hidden="true" />
+              <h3 className="text-2xl font-serif tracking-wide text-white">
+                {content.nav.home === 'Home' ? 'OZDEMIR' : 'ÖZDEMİR'}
+                <span className="block text-[10px] font-sans font-medium text-accent-300 mt-1 uppercase tracking-[0.35em]">
+                  {content.nav.home === 'Home' ? 'Law Office' : 'Hukuk Bürosu'}
+                </span>
+              </h3>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 font-sans">
               {content.footer.description}
             </p>
@@ -87,7 +92,7 @@ export default function Footer({ content }: FooterProps) {
               </li>
               <li>
                 <a
-                  href={`tel:${content.contact.phone}`}
+                  href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
                   className="flex items-center space-x-3 group hover:text-white transition-colors"
                 >
                   <Phone className="w-5 h-5 text-accent-500 group-hover:text-accent-400 transition-colors" />
@@ -96,7 +101,7 @@ export default function Footer({ content }: FooterProps) {
               </li>
               <li>
                 <a
-                  href={`https://wa.me/${content.contact.phone.replace(/\s/g, '')}`}
+                  href={`https://wa.me/${content.contact.phone.replace(/\D/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 group hover:text-white transition-colors"
@@ -143,7 +148,7 @@ export default function Footer({ content }: FooterProps) {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm font-sans text-gray-500">
             <p>
-              © {currentYear} ÖZDEMIR Law Office. {content.footer.allRightsReserved}
+              © {currentYear} {content.nav.home === 'Home' ? 'OZDEMIR Law Office' : 'ÖZDEMİR Hukuk Bürosu'}. {content.footer.allRightsReserved}
             </p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-accent-400 transition-colors">

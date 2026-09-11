@@ -12,7 +12,9 @@ import { Reveal } from './components/Reveal';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() =>
+    new URLSearchParams(window.location.search).get('lang') === 'tr' ? 'tr' : 'en'
+  );
   const currentContent = content[language];
 
   useEffect(() => {

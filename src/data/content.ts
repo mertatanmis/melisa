@@ -13,6 +13,7 @@ export const content: Record<string, LanguageContent> = {
       services: 'Services',
       location: 'Location',
       contact: 'Contact',
+      cta: 'Free Consultation',
     },
     hero: {
       eyebrow: 'Boutique Law Firm — Kuşadası, Türkiye',
@@ -77,6 +78,7 @@ export const content: Record<string, LanguageContent> = {
       },
       testimonials: {
         title: 'Client Testimonials',
+        readMore: 'Read more',
         items: [
           {
             quote: 'Professional and efficient handling of tenant issues. Their expertise in property law made the resolution process smooth and effective.',
@@ -279,11 +281,12 @@ export const content: Record<string, LanguageContent> = {
       services: 'Hizmetler',
       location: 'Konum',
       contact: 'İletişim',
+      cta: 'Randevu Al',
     },
     hero: {
       eyebrow: 'Butik Hukuk Bürosu — Kuşadası, Türkiye',
       headline: 'Kuşadası\'nda İngilizce ve Türkçe hukuki danışmanlık.',
-      subtitle: 'Uluslararası müvekkillere gayrimenkul, ikamet, miras ve ticari konularda Türk hukuku kapsamında danışmanlık — ana dil seviyesinde İngilizce ile.',
+      subtitle: 'Uluslararası müvekkillere gayrimenkul, ikamet, miras ve ticari konularda, ana dil seviyesinde İngilizce hukuki danışmanlık.',
       credentials: ['Av. Melisa Gül Özdemir', 'Aydın Barosu', 'LL.M. Hull Üniversitesi', 'LL.B. İzmir Ekonomi Üniversitesi'],
       indexTitle: 'Uzmanlık Alanları',
       cta: 'Ücretsiz Danışmanlık Randevusu Al',
@@ -343,6 +346,7 @@ export const content: Record<string, LanguageContent> = {
       },
       testimonials: {
         title: 'Müvekkil Görüşleri',
+        readMore: 'Devamını oku',
         items: [
           {
             quote: 'Kiracı sorunlarının profesyonel ve etkili bir şekilde ele alınması. Gayrimenkul hukukundaki uzmanlıkları çözüm sürecini sorunsuz ve etkili hale getirdi.',

@@ -115,14 +115,14 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                     : 'border-white/30 text-white hover:border-accent-300 hover:text-accent-300'
                 }`}
               >
-                {language === 'en' ? 'EN | TR' : 'TR | EN'}
+                {language === 'en' ? 'TR' : 'EN'}
               </button>
 
               <a
                 href="#contact"
                 className="text-[13px] font-semibold uppercase tracking-[0.15em] whitespace-nowrap text-white bg-accent-500 px-6 py-2.5 shadow-md hover:bg-accent-400 transition-colors duration-300"
               >
-                {content.hero.cta}
+                {content.nav.cta}
               </a>
             </div>
 
@@ -132,7 +132,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                 onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
                 className={`text-sm font-bold tracking-wider ${scrolled ? 'text-accent-600' : 'text-accent-300'}`}
               >
-                {language === 'en' ? 'EN' : 'TR'}
+                {language === 'en' ? 'TR' : 'EN'}
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -170,9 +170,9 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                 <a
                   href="#contact"
                   onClick={(e) => scrollToSection(e, 'contact')}
-                  className="inline-block mt-2 text-sm font-semibold uppercase tracking-widest text-white bg-accent-500 hover:bg-accent-600 px-6 py-3 rounded-full transition-colors"
+                  className="inline-block mt-2 text-sm font-semibold uppercase tracking-widest text-white bg-accent-500 hover:bg-accent-600 px-6 py-3 transition-colors"
                 >
-                  {content.hero.cta}
+                  {content.nav.cta}
                 </a>
               </div>
             </motion.div>

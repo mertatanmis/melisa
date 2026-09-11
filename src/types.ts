@@ -30,6 +30,7 @@ export interface Testimonial {
 
 interface Testimonials {
   title: string;
+  readMore: string;
   items: Testimonial[];
 }
 
@@ -40,6 +41,7 @@ export interface LanguageContent {
     services: string;
     location: string;
     contact: string;
+    cta: string;
   };
   hero: {
     eyebrow: string;

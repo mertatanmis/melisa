@@ -174,8 +174,8 @@ const ApproachSection: React.FC<ApproachProps> = ({ approach }) => (
       </p>
       <div className="mt-8 pt-7 border-t border-neutral-100 grid sm:grid-cols-3 gap-4">
         {approach.pillars.map((pillar, i) => (
-          <div key={i} className="flex items-center gap-3">
-            <Scale className="w-4 h-4 text-accent-500 flex-shrink-0" aria-hidden="true" />
+          <div key={i} className="flex items-start gap-3">
+            <Scale className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
             <span className="text-sm font-sans font-semibold text-corporate-800 tracking-wide">
               {pillar}
             </span>

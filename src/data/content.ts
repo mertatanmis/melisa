@@ -107,6 +107,10 @@ export const content: Record<string, LanguageContent> = {
           {
             quote: 'I just want to recommend Melisa — from the first contact by WhatsApp to meeting her, she has been very efficient and put my mind at ease. My timeline was very short but she accommodated me very quickly. Very approachable and friendly, but very professional. I would recommend her especially to people who need an English speaker — her English is impeccable.',
             author: 'Bernie Butler'
+          },
+          {
+            quote: 'I had an excellent experience with Melissa Özdemir. She communicated everything clearly in English, which is hard to find as an expat in Turkey — explained everything in a simple and understandable way, and kept me informed throughout the process. She was professional, knowledgeable and very responsive, and genuinely helpful. I would highly recommend her services to anyone looking for a reliable and trustworthy solicitor.',
+            author: 'Lisa Algan'
           }
         ]
       },
@@ -375,6 +379,10 @@ export const content: Record<string, LanguageContent> = {
           {
             quote: 'Melisa\'yı tavsiye etmek istiyorum — WhatsApp\'taki ilk iletişimden yüz yüze görüşmeye kadar çok verimliydi ve içimi rahatlattı. Zaman çizelgem çok kısaydı ama beni çok hızlı kabul etti. Çok yaklaşılabilir ve samimi ama aynı zamanda çok profesyonel. Özellikle İngilizce konuşan birine ihtiyaç duyanlara tavsiye ederim — İngilizcesi kusursuz.',
             author: 'Bernie Butler'
+          },
+          {
+            quote: 'Melisa Özdemir ile mükemmel bir deneyim yaşadım. Türkiye\'de bir yabancı olarak bulunması zor şekilde, her şeyi İngilizce net bir biçimde iletti — süreci basit ve anlaşılır şekilde açıkladı ve beni her aşamada bilgilendirdi. Profesyonel, bilgili, çok hızlı dönüş yapan ve gerçekten yardımseverdi. Güvenilir bir avukat arayan herkese hizmetlerini şiddetle tavsiye ederim.',
+            author: 'Lisa Algan'
           }
         ]
       },

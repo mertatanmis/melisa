@@ -222,6 +222,16 @@ export const content: Record<string, LanguageContent> = {
             'Financial matters: proof of funds and bank statement legalisation',
             'Obtaining Turkish tax numbers for official purposes'
           ]
+        },
+        {
+          title: 'Minor Criminal Cases',
+          description: 'Defence and guidance in minor criminal cases — such as breaches of construction law and other minor criminal charges. We represent residents and foreign nationals through police, prosecutor and court proceedings with clear advice at every stage.',
+          features: [
+            'Minor criminal cases and charges',
+            'Breaches of construction law (unpermitted building works)',
+            'Representation in police and court proceedings',
+            'Clear guidance for foreign nationals facing charges'
+          ]
         }
       ],
     },
@@ -493,6 +503,16 @@ export const content: Record<string, LanguageContent> = {
             'Medeni işlemler: yeni doğan ve soybağı tanıma belgeleri',
             'Mali işlemler: mal varlığı belgesi ve banka dekontu legalizasyonu',
             'Resmi işlemler için Türk vergi numarası temini'
+          ]
+        },
+        {
+          title: 'Asliye Ceza Davaları',
+          description: 'İmar mevzuatı ihlalleri (kaçak yapı) gibi suçlamalar ve diğer asliye ceza kapsamındaki davalarda savunma ve rehberlik. Yerleşikler ve yabancı uyruklular için karakol, savcılık ve mahkeme süreçlerinin her aşamasında net bilgilendirme ile temsil.',
+          features: [
+            'Asliye ceza kapsamındaki dava ve suçlamalar',
+            'İmar mevzuatı ihlalleri (kaçak yapı)',
+            'Karakol ve mahkeme süreçlerinde temsil',
+            'Suçlama ile karşılaşan yabancı uyruklular için net rehberlik'
           ]
         }
       ],

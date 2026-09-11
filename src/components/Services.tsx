@@ -18,7 +18,8 @@ export default function Services({ content }: ServicesProps) {
     'estate-planning.jpg',
     'investment-tax.jpg',
     'tourist-protection.jpg',
-    'legal-consultation.jpg'
+    'legal-consultation.jpg',
+    'criminal-cases.jpg'
   ];
 
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -51,7 +52,7 @@ export default function Services({ content }: ServicesProps) {
           subtitle={content.services.subtitle}
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {content.services.items.map((service, index) => {
             const imagePath = `/images/services/${backgroundImages[index]}`;
 
@@ -61,7 +62,7 @@ export default function Services({ content }: ServicesProps) {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
+                transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
                 onClick={() => openModal(index)}
                 className="group relative rounded-xl overflow-hidden cursor-pointer h-[420px] ring-1 ring-white/10 hover:ring-accent-400/60 hover:-translate-y-1.5 transition-all duration-500 shadow-lg"
               >

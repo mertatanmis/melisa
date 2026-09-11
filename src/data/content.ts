@@ -217,6 +217,7 @@ export const content: Record<string, LanguageContent> = {
       formEmail: 'Your Email',
       formPhone: 'Your Phone',
       formMessage: 'Your Message',
+      formMessagePlaceholder: 'How can we help you?',
       formSubmit: 'Send Message',
       whatsapp: 'Contact on WhatsApp',
     },
@@ -235,6 +236,16 @@ export const content: Record<string, LanguageContent> = {
       weekdayHours: '9:00 - 18:00',
       saturdayHours: '10:00 - 14:00',
       closed: 'Closed'
+    },
+    a11y: {
+      toggleMenu: 'Toggle menu',
+      close: 'Close',
+      previousImage: 'Previous image',
+      nextImage: 'Next image',
+      previousTestimonial: 'Previous testimonial',
+      nextTestimonial: 'Next testimonial',
+      goToSlide: 'Go to slide {n}',
+      goToTestimonial: 'Go to testimonial {n}',
     }
   },
   tr: {
@@ -448,6 +459,7 @@ export const content: Record<string, LanguageContent> = {
       formEmail: 'E-posta Adresiniz',
       formPhone: 'Telefon Numaranız',
       formMessage: 'Mesajınız',
+      formMessagePlaceholder: 'Size nasıl yardımcı olabiliriz?',
       formSubmit: 'Mesaj Gönder',
       whatsapp: 'WhatsApp\'tan Ulaşın',
     },
@@ -466,6 +478,16 @@ export const content: Record<string, LanguageContent> = {
       weekdayHours: '9:00 - 18:00',
       saturdayHours: '10:00 - 14:00',
       closed: 'Kapalı'
+    },
+    a11y: {
+      toggleMenu: 'Menüyü aç/kapat',
+      close: 'Kapat',
+      previousImage: 'Önceki görsel',
+      nextImage: 'Sonraki görsel',
+      previousTestimonial: 'Önceki yorum',
+      nextTestimonial: 'Sonraki yorum',
+      goToSlide: '{n}. slayta git',
+      goToTestimonial: '{n}. yoruma git',
     }
   },
 };

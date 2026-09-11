@@ -103,7 +103,7 @@ export default function Services({ content }: ServicesProps) {
       {/* Modal Overlay */}
       <AnimatePresence>
         {selectedService !== null && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-[80] flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -121,7 +121,7 @@ export default function Services({ content }: ServicesProps) {
               <button
                 onClick={closeModal}
                 className="absolute top-4 right-4 z-20 p-2 bg-corporate-900/50 hover:bg-corporate-900/80 backdrop-blur-md rounded-full text-white transition-colors"
-                aria-label="Close"
+                aria-label={content.a11y.close}
               >
                 <X className="w-5 h-5" />
               </button>

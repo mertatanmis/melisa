@@ -106,7 +106,7 @@ export default function ImageSlider({ content }: ImageSliderProps) {
       <button
         onClick={goToPrevious}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-2.5 rounded-full transition-all duration-300 border border-white/20"
-        aria-label="Previous image"
+        aria-label={content.a11y.previousImage}
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
@@ -114,7 +114,7 @@ export default function ImageSlider({ content }: ImageSliderProps) {
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-2.5 rounded-full transition-all duration-300 border border-white/20"
-        aria-label="Next image"
+        aria-label={content.a11y.nextImage}
       >
         <ChevronRight className="w-5 h-5" />
       </button>

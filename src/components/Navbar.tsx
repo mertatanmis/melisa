@@ -32,6 +32,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
     setIsOpen(false);
     window.setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, '', `#${id}`);
     }, 50);
   };
 
@@ -138,7 +139,7 @@ export default function Navbar({ content, language, setLanguage }: NavbarProps) 
                 className={`p-2 rounded-full transition-colors ${
                   scrolled ? 'text-corporate-900 hover:bg-black/5' : 'text-white hover:bg-white/10'
                 }`}
-                aria-label="Toggle menu"
+                aria-label={content.a11y.toggleMenu}
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

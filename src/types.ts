@@ -94,6 +94,7 @@ export interface LanguageContent {
     formEmail: string;
     formPhone: string;
     formMessage: string;
+    formMessagePlaceholder: string;
     formSubmit: string;
     whatsapp: string;
   };
@@ -112,5 +113,15 @@ export interface LanguageContent {
     weekdayHours: string;
     saturdayHours: string;
     closed: string;
+  };
+  a11y: {
+    toggleMenu: string;
+    close: string;
+    previousImage: string;
+    nextImage: string;
+    previousTestimonial: string;
+    nextTestimonial: string;
+    goToSlide: string;
+    goToTestimonial: string;
   };
 }

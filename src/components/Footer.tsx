@@ -92,7 +92,7 @@ export default function Footer({ content }: FooterProps) {
               </li>
               <li>
                 <a
-                  href={`tel:${content.contact.phone}`}
+                  href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
                   className="flex items-center space-x-3 group hover:text-white transition-colors"
                 >
                   <Phone className="w-5 h-5 text-accent-500 group-hover:text-accent-400 transition-colors" />
@@ -101,7 +101,7 @@ export default function Footer({ content }: FooterProps) {
               </li>
               <li>
                 <a
-                  href={`https://wa.me/${content.contact.phone.replace(/\s/g, '')}`}
+                  href={`https://wa.me/${content.contact.phone.replace(/\D/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 group hover:text-white transition-colors"
@@ -148,7 +148,7 @@ export default function Footer({ content }: FooterProps) {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm font-sans text-gray-500">
             <p>
-              © {currentYear} ÖZDEMIR Law Office. {content.footer.allRightsReserved}
+              © {currentYear} {content.nav.home === 'Home' ? 'OZDEMIR Law Office' : 'ÖZDEMİR Hukuk Bürosu'}. {content.footer.allRightsReserved}
             </p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-accent-400 transition-colors">

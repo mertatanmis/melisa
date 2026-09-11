@@ -18,7 +18,7 @@ const getLocationImages = (isEnglish: boolean) => [
   },
   {
     url: "/images/kusadasi/guvercinada.jpg",
-    caption: "Güvercin Adası (Pigeon Island)",
+    caption: isEnglish ? "Güvercin Adası (Pigeon Island)" : "Güvercin Adası",
     description: isEnglish
       ? "Historic fortress with panoramic views of the Aegean Sea"
       : "Ege Denizi'nin panoramik manzarasına sahip tarihi kale"
@@ -145,14 +145,14 @@ export default function Location({ content }: LocationProps) {
             <button
               onClick={goToPrevious}
               className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
-              aria-label="Previous image"
+              aria-label={content.a11y.previousImage}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={goToNext}
               className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-corporate-900/40 backdrop-blur-md hover:bg-accent-500 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
-              aria-label="Next image"
+              aria-label={content.a11y.nextImage}
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -194,7 +194,7 @@ export default function Location({ content }: LocationProps) {
                       ? 'bg-accent-400 w-6'
                       : 'bg-white/50 w-1.5 hover:bg-white/80'
                     }`}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={content.a11y.goToSlide.replace('{n}', String(index + 1))}
                 />
               ))}
             </div>

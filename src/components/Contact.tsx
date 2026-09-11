@@ -71,13 +71,13 @@ export default function Contact({ content }: ContactProps) {
       icon: <Phone className="w-5 h-5 text-accent-600" />,
       label: content.contact.phoneLabel,
       value: content.contact.phone,
-      href: `tel:${content.contact.phone}`,
+      href: `tel:${content.contact.phone.replace(/\s/g, '')}`,
     },
     {
       icon: WHATSAPP_ICON,
       label: content.contact.whatsappLabel,
       value: content.contact.phone,
-      href: `https://wa.me/${content.contact.phone.replace(/\s/g, '')}`,
+      href: `https://wa.me/${content.contact.phone.replace(/\D/g, '')}`,
     },
     {
       icon: <Mail className="w-5 h-5 text-accent-600" />,
@@ -214,7 +214,7 @@ export default function Contact({ content }: ContactProps) {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     className="input-field resize-none"
-                    placeholder="How can we help you?"
+                    placeholder={content.contact.formMessagePlaceholder}
                   ></textarea>
                 </div>
 

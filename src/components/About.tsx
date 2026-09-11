@@ -55,7 +55,7 @@ const About: React.FC<AboutProps> = ({ content }) => {
                 </h3>
                 <span className="flex-1 h-px bg-gradient-to-r from-accent-300/60 to-transparent" />
               </div>
-              <TestimonialSlider testimonials={content.about.testimonials} />
+              <TestimonialSlider testimonials={content.about.testimonials} a11y={content.a11y} />
             </div>
           </div>
         </div>

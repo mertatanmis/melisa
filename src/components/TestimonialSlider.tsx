@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Testimonial } from '../types';
+import { LanguageContent, Testimonial } from '../types';
 
 interface TestimonialSliderProps {
   testimonials: {
     title: string;
     items: Testimonial[];
   };
+  a11y: LanguageContent['a11y'];
 }
 
-export default function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
+export default function TestimonialSlider({ testimonials, a11y }: TestimonialSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -68,14 +69,14 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
       <button
         onClick={goToPrevious}
         className="absolute left-3 top-1/2 z-10 -translate-y-1/2 p-2 rounded-full text-white/50 hover:text-accent-300 hover:bg-white/10 transition-all duration-300"
-        aria-label="Previous testimonial"
+        aria-label={a11y.previousTestimonial}
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={goToNext}
         className="absolute right-3 top-1/2 z-10 -translate-y-1/2 p-2 rounded-full text-white/50 hover:text-accent-300 hover:bg-white/10 transition-all duration-300"
-        aria-label="Next testimonial"
+        aria-label={a11y.nextTestimonial}
       >
         <ChevronRight className="w-5 h-5" />
       </button>
@@ -88,7 +89,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
             className={`h-1.5 rounded-full transition-all duration-300 ${
               index === currentIndex ? 'bg-accent-400 w-6' : 'bg-white/25 w-1.5 hover:bg-white/50'
             }`}
-            aria-label={`Go to testimonial ${index + 1}`}
+            aria-label={a11y.goToTestimonial.replace('{n}', String(index + 1))}
           />
         ))}
       </div>
